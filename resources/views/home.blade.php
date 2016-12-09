@@ -8,8 +8,16 @@
                 <div class="panel-heading">C-Docs - Documents you see</div>
 
                 <div class="panel-body">
-                    You are Logged in.
+                    You are Logged in!
+
                 </div>
+                <div class=" panel-body links">
+                  <a href="#">Documents</a>
+                  <a href="#">Transmittals</a>
+                  <a href="#">Reports</a>
+
+                </div>
+
             </div>
         </div>
     </div>
