@@ -9,7 +9,7 @@ use App\Document;
 class Transmittal extends Model
 {
 
-    protected $fillable =['numer','used_id','discipline_id'];
+    protected $fillable =['number','user_id','document_id'];
 
     public function users(){
     return $this->hasMany('App\User');

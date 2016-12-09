@@ -13,7 +13,7 @@ use App\Transmittal;
 class Document extends Model
 {
 
-protected $fillable =['title','number','project','division','discipline','area','revision','revision_date', 'used_id','area_id', 'discipline_id', 'documentStatus_id', 'project_id'  ];
+protected $fillable =['title','number','project','division','discipline','area','revision','revision_date', 'user_id','area_id', 'discipline_id', 'documentStatus_id', 'project_id', 'transmittal_id'  ];
 
 
   public function user(){

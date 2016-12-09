@@ -10,7 +10,7 @@ use App\Transmittal;
 
 class Project extends Model
 {
-  protected $fillable =['code','name','used_id','area_id'];
+  protected $fillable =['code','name','user_id','area_id'];
 
 
     public function users(){
