@@ -9,14 +9,14 @@
 
       <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" name="title" value="{{ old('title') }}" class="form-control">
+        <input type="text" name="title" value="{{ old('title') }}" placeholder="Type Document Title" class="form-control">
       </div>
 
       <div class="form-group">
         <label for="project_id">Project</label>
         <select name="project_id" class="form-control">
           @foreach($projects as $project)
-            <option value="{{ $project->id }}">{{ $project->name }}</option>
+            <option value="{{ $project->id }}">{{ $project->code}} - {{ $project->name }}</option>
           @endforeach
         </select>
       </div>
@@ -24,7 +24,7 @@
         <label for="division_id">Division</label>
         <select name="division_id" class="form-control">
           @foreach($divisions as $division)
-            <option value="{{ $division->id }}">{{ $division->name }}</option>
+            <option value="{{ $division->id }}">{{$division->code}} - {{ $division->name }}</option>
           @endforeach
         </select>
       </div>
@@ -40,17 +40,17 @@
         <label for="area_id">Area</label>
         <select name="area_id" class="form-control">
           @foreach($areas as $area)
-            <option value="{{ $area->id }}">{{ $area->name }}</option>
+            <option value="{{ $area->id }}">{{ $area->code }} - {{ $area->name }}</option>
           @endforeach
         </select>
       </div>
       <div class="form-group">
         <label for="number">Number</label>
-        <input type="text" name="number" value="{{ old('number') }}" class="form-control">
+        <input type="text" name="number" value="{{ old('number') }}" placeholder="0001" class="form-control">
       </div>
       <div class="form-group">
         <label for="revision">Revision</label>
-        <input type="text" name="revision" value="{{ old('revision') }}" class="form-control">
+        <input type="text" name="revision" value="{{ old('revision') }}"  placeholder="A" class="form-control">
       </div>
       <div class="form-group">
         <label for="revision_date">Rev. Date</label>
