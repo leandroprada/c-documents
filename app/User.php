@@ -4,12 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Project;
-use App\Role;
-use App\Discipline;
-use App\Document;
-use App\Transmittal;
-use App\Division;
+
+
 
 
 class User extends Authenticatable

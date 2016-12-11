@@ -12,7 +12,7 @@ class Transmittal extends Model
     protected $fillable =['number','user_id','document_id'];
 
     public function users(){
-    return $this->hasMany('App\User');
+    return $this->belongsTo('App\User');
   }
 
       public function documents(){

@@ -7,6 +7,7 @@ $divisions  = \App\Division::all();
 $statuses  = \App\Status::all();
 $projects  = \App\Project::all();
 $documents  = \App\Document::all();
+$transmittals  = \App\Transmittal::all();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
