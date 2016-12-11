@@ -30,9 +30,9 @@ class DocumentsController extends Controller
         $deliverables  = \App\Deliverable::all();
         $disciplines  = \App\Discipline::all();
         $divisions  = \App\Division::all();
-        $documentStatus  = \App\DocumentStatus::all();
+        $statuses  = \App\Status::all();
         $projects  = \App\Project::all();
-        return view('documents.form', compact('roles', 'areas','areas','deliverables','disciplines','divisions','documentStatus','projects'));
+        return view('documents.form', compact('roles', 'areas','areas','deliverables','disciplines','divisions','statuses','projects'));
     }
 
     /**
@@ -72,14 +72,16 @@ class DocumentsController extends Controller
      */
     public function edit(Document $document)
     {
+
+      // $documents = \App\Document::all();
       $roles = \App\Role::all();
       $areas = \App\Area::all();
       $deliverables  = \App\Deliverable::all();
       $disciplines  = \App\Discipline::all();
       $divisions  = \App\Division::all();
-      $documentStatus  = \App\DocumentStatus::all();
+      $statuses  = \App\Status::all();
       $projects  = \App\Project::all();
-      return view('documents.form-edit', compact('roles', 'areas','areas','deliverables','disciplines','divisions','documentStatus','projects'));
+      return view('documents.form-edit', compact('roles', 'areas','deliverables','disciplines','divisions','status','projects'));
     }
 
     /**
@@ -104,7 +106,7 @@ class DocumentsController extends Controller
      */
     public function destroy(Document $document)
     {
-        //Document::destroy($id);
+        Document::destroy($id);
 
         // foreach ($document->images as $image) {
         //   //borrar los archivo imagen
@@ -113,8 +115,8 @@ class DocumentsController extends Controller
         //   $image->delete();
         // }
         //pasar el document a inactivo
-        $document->documentStatus_id = 0;
-        $document->save();
+        // $document->status_id = 0;
+        // $document->save();
 
         return redirect('documents');
     }

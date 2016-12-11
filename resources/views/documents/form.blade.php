@@ -5,7 +5,7 @@
     <form action="/documents" method="post" class="form-horizontal">
       {{ csrf_field() }}
       {{ method_field('post') }}
-      
+
 
       <div class="form-group">
         <label for="title">Title</label>
@@ -51,6 +51,10 @@
       <div class="form-group">
         <label for="revision">Revision</label>
         <input type="text" name="revision" value="{{ old('revision') }}" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="revision_date">Rev. Date</label>
+        <input type="text" name="revision_date" value="{{ old('revision_date') }}" placeholder="2016-05-29" class="form-control">
       </div>
 
       <div class="form-group">

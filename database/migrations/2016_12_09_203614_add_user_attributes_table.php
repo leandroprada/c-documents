@@ -14,9 +14,9 @@ class AddUserAttributesTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('project_id')->unsigned()->index();
-            $table->integer('role_id')->unsigned()->index();
-            $table->integer('discipline_id')->unsigned()->index();
+            $table->integer('project_id')->unsigned()->index()->nullable();
+            $table->integer('role_id')->unsigned()->index()->nullable();
+            $table->integer('discipline_id')->unsigned()->index()->nullable();
         });
     }
 

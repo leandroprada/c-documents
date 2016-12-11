@@ -21,7 +21,7 @@
             <td>{{ $document->title }}</td>
             <td>{{ $document->revision }}</td>
             <td>{{ $document->revision_date }}</td>
-            <td>{{ $document->documentStatus_id }}</td>
+            <td>{{ $document->status_id }}</td>
             @if (Auth::user()->role_id === 1)
             <td>
             <a href="/documents/{{$document->id}}/edit">Editar</a>

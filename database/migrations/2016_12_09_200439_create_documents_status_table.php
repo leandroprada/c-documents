@@ -13,10 +13,10 @@ class CreateDocumentsStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('document_statuses', function (Blueprint $table) {
+        Schema::create('statuses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',255);
-            $table->integer('document_id')->unsigned()->index();
+            $table->integer('document_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateDocumentsStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('document_statuses');
+        Schema::dropIfExists('statuses');
     }
 }

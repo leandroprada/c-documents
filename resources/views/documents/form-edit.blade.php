@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
   <div class="container">
     <form action="/documents/{{$document->id}}" method="post" class="form-horizontal">
       {{ csrf_field() }}

@@ -7,6 +7,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use App\Project;
+use App\Role;
+use App\Discipline;
+use App\Document;
+use App\Transmittal;
+use App\Division;
+
+
 class RegisterController extends Controller
 {
     /*
@@ -62,10 +70,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'project_id' => $data['project_id'],
+            'role_id' => $data['role_id'],
+            'discipline_id' => $data['discipline_id'],
         ]);
+
+
     }
 }

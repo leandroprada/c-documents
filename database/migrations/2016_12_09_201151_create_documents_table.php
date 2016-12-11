@@ -19,12 +19,12 @@ class CreateDocumentsTable extends Migration
             $table->string('number',255);
             $table->string('revision',255);
             $table->string('revision_date',255);
-            $table->integer('user_id')->unsigned()->index();
-            $table->integer('area_id')->unsigned()->index();
-            $table->integer('discipline_id')->unsigned()->index();
-            $table->integer('documentStatus_id')->unsigned()->index();
-            $table->integer('project_id')->unsigned()->index();
-            $table->integer('transmittal_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->integer('area_id')->unsigned()->index()->nullable();
+            $table->integer('discipline_id')->unsigned()->index()->nullable();
+            $table->integer('status_id')->unsigned()->index()->nullable();
+            $table->integer('project_id')->unsigned()->index()->nullable();
+            $table->integer('transmittal_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });
     }

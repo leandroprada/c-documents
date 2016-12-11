@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -59,7 +60,45 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+<hr>
+                <div class="form-group">
+                    <label for="project_id" class="col-md-4 control-label">Project</label>
 
+                  <div class="col-md-6">
+                        <select name="project_id" class="form-control">
+                          @foreach($projects as $project)
+                            <option value="{{ $project->id }}">{{ $project->name }}</option>
+                          @endforeach
+                        </select>
+
+                      </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="discipline_id" class="col-md-4 control-label">Discipline</label>
+
+                  <div class="col-md-6">
+                        <select name="discipline_id" class="form-control">
+                          @foreach($disciplines as $discipline)
+                            <option value="{{ $discipline->id }}">{{ $discipline->name }}</option>
+                          @endforeach
+                        </select>
+
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="role_id" class="col-md-4 control-label">Role</label>
+
+                    <div class="col-md-6">
+                          <select name="role_id" class="form-control">
+                            @foreach($roles as $role)
+                              <option value="{{ $role->id }}">{{ $role->name }}</option>
+                            @endforeach
+                          </select>
+
+                        </div>
+                    </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

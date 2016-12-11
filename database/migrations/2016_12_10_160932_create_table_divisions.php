@@ -15,8 +15,8 @@ class CreateTableDivisions extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->string('name',255);
-            $table->integer('user_id')->unsigned()->index();
-            $table->integer('discipline_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->integer('discipline_id')->unsigned()->index()->nullable();
 
             $table->timestamps();
         });

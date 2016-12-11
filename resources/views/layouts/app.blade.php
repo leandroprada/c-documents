@@ -1,3 +1,13 @@
+@php
+$roles = \App\Role::all();
+$areas = \App\Area::all();
+$deliverables  = \App\Deliverable::all();
+$disciplines  = \App\Discipline::all();
+$divisions  = \App\Division::all();
+$statuses  = \App\Status::all();
+$projects  = \App\Project::all();
+$documents  = \App\Document::all();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>

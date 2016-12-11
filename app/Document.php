@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Area;
 use App\Discipline;
-use App\DocumentStatus;
+use App\Status;
 use App\Project;
 use App\Transmittal;
 
 class Document extends Model
 {
 
-protected $fillable =['title','number','project','division','discipline','area','revision','revision_date', 'user_id','area_id', 'discipline_id', 'documentStatus_id', 'project_id', 'transmittal_id'  ];
+protected $fillable =['title','number','project','division','discipline','area','revision','revision_date', 'user_id','area_id', 'discipline_id', 'status_id', 'project_id', 'transmittal_id'  ];
 
 
   public function user(){
@@ -25,8 +25,8 @@ protected $fillable =['title','number','project','division','discipline','area',
   public function discipline(){
   return $this->belongsTo('App\Discipline');
 }
-  public function documentStatus(){
-  return $this->hasOne('App\DocumentStatus');
+  public function status(){
+  return $this->hasOne('App\Status');
 }
   public function project(){
   return $this->belongsTo('App\Project');
