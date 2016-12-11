@@ -97,9 +97,9 @@ margin: auto;
                 </div>
 
                 <div class="links">
-                    <a href="#">Documents</a>
-                    <a href="#">Transmittals</a>
-                    <a href="#">Reports</a>
+                    <a href="documents/">Documents</a>
+                    <a href="transmittals/">Transmittals</a>
+                    <a href="documents/">Reports</a>
 
                 </div>
             </div>

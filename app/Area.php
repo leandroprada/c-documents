@@ -3,8 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App/Project;
-use App/Document;
+use App\Project;
+use App\Document;
+
 class Area extends Model
 {
   protected $fillable =['code','name','document_id','project_id'];

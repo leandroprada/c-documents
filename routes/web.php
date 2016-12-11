@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::resource('documents', 'DocumentsController');
+// Route::post('documents/{id}/images', 'DocumentsController@images');

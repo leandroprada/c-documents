@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocumentsStatusTable extends Migration
+class CreateTableDivisions extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateDocumentsStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('document_statuses', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('divisions', function (Blueprint $table) {
             $table->string('name',255);
-            $table->integer('document_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index();
+            $table->integer('discipline_id')->unsigned()->index();
+
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateDocumentsStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('document_statuses');
+        Schema::dropIfExists('divisions');
     }
 }
