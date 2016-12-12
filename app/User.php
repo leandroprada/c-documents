@@ -5,6 +5,12 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use App\Discipline;
+use App\Division;
+use App\Document;
+use App\Role;
+use App\Project;
+
 
 
 
@@ -30,6 +36,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function division(){
+    return $this->belongsto('App\Division');
+  }
+  public function project(){
+  return $this->belongsto('App\Project');
+}
     public function documents(){
     return $this->hasMany('App\Document');
   }
@@ -45,7 +57,5 @@ public function discipline(){
 return $this->belongsTo('App\Discipline');
 }
 
-public function Division(){
-return $this->hasMany('App\Division');
-}
+
 }

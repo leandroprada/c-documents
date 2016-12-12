@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Area;
 use App\User;
 use App\Document;
+use App\Division;
 use App\Transmittal;
 
 class Project extends Model
@@ -17,6 +18,9 @@ class Project extends Model
     return $this->hasMany('App\User');
   }
 
+  public function divisions(){
+  return $this->hasMany('App\Division');
+}
   public function areas(){
   return $this->hasMany('App\Area');
 }

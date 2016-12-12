@@ -12,9 +12,9 @@
 
                 </div>
                 <div class=" panel-body links">
-                  <a href="#">Documents</a>
-                  <a href="#">Transmittals</a>
-                  <a href="#">Reports</a>
+                  <a href="documents/">Documents</a>
+                  <a href="transmittals/">Transmittals</a>
+                  <a href="reports/">Reports</a>
 
                 </div>
 

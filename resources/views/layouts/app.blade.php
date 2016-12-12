@@ -32,6 +32,7 @@ $transmittals  = \App\Transmittal::all();
     </script>
 </head>
 <body>
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -53,7 +54,9 @@ $transmittals  = \App\Transmittal::all();
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <img src="/images/logo_white.jpg" height="50px"alt="">
+                    <a class="" href="{{ url('/') }}">
+                      <img src="/images/logo_white.jpg" height="50px"alt="">
+                          </a>
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>

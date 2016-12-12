@@ -19,8 +19,8 @@
         <h3>Discipline</h3>
         <p>{{ $transmittal->discipline->name }}</p>
 
-        <h3>Division</h3>
-        <p>{{ $transmittal->divisions }}</p>
+        <h3>Project</h3>
+        <p>{{ $transmittal->project->name }}</p>
 
 
       </div>

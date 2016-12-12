@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableDivisions extends Migration
+class AddDivisionToDiscipline extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateTableDivisions extends Migration
      */
     public function up()
     {
-        Schema::create('divisions', function (Blueprint $table) {
-              $table->increments('id');
-            $table->string('name',255);
-            $table->integer('user_id')->unsigned()->index()->nullable();
+        Schema::table('disciplines', function (Blueprint $table) {
             $table->integer('discipline_id')->unsigned()->index()->nullable();
-
-            $table->timestamps();
         });
     }
 
@@ -30,6 +25,8 @@ class CreateTableDivisions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('divisions');
+        Schema::table('disciplines', function (Blueprint $table) {
+            //
+        });
     }
 }

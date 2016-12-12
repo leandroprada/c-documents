@@ -20,7 +20,7 @@
         <p>{{ $document->discipline->name }}</p>
 
         <h3>Division</h3>
-        <p>{{ $document->divisions }}</p>
+        <p>{{ $document->division-> }}</p>
 
 
       </div>

@@ -15,6 +15,7 @@ class CreateDocumentsStatusTable extends Migration
     {
         Schema::create('statuses', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code',255);
             $table->string('name',255);
             $table->integer('document_id')->unsigned()->index()->nullable();
             $table->timestamps();

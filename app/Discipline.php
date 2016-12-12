@@ -5,11 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Document;
+use App\Division;
 use App\Deliverable;
 
 class Discipline extends Model
 {
-  protected $fillable =['code','name', 'document_id', 'user_id', 'deliverable_id'];
+  protected $fillable =['code','name', 'document_id', 'user_id', 'deliverable_id', 'division_id'];
 
 
     public function documents(){
@@ -20,5 +21,8 @@ class Discipline extends Model
   }
   public function deliverables(){
   return $this->hasMany('App\Deliverables');
+}
+public function division(){
+return $this->belongsTo('App\Division');
 }
 }

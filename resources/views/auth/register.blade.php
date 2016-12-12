@@ -1,7 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-
+@php
+$roles = \App\Role::all();
+$areas = \App\Area::all();
+$deliverables  = \App\Deliverable::all();
+$disciplines  = \App\Discipline::all();
+$divisions  = \App\Division::all();
+$statuses  = \App\Status::all();
+$projects  = \App\Project::all();
+$documents  = \App\Document::all();
+$transmittals  = \App\Transmittal::all();
+@endphp
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
