@@ -44,9 +44,10 @@ class DocumentsController extends Controller
     public function store(Request $request)
     {
         $document = \Auth::user()->documents()->create($request->all());
+
+        $document->user_id = \Auth::id();
         /*
         $data = $request->all();
-        $data['user_id'] = \Auth::id();
         $document = Document::create($data);
         */
         // $document->materials()->sync($request->input('materials'));

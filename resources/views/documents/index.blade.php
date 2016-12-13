@@ -2,8 +2,13 @@
 
 @section('content')
   <div class="container">
-    <h1>DL - Document List</h1>
-
+<div class="row">
+  <div class="ol-xs-4">
+    <h1>DL - Document List </h1>
+  </div>
+<div class="col-xs-3 col-xs-offset-8  col-md-2 col-md-offset-10"> <button type="button"class="btn btn-success btn-lg" name="button"  ><a href="/documents/create" style="text-decoration:none; color:white" >New Document</a></button></div>
+</div>
+<hr style="color:transparent">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
@@ -24,7 +29,7 @@
             <td>{{ $document->status_id }}</td>
             @if (Auth::user()->role_id === 1)
             <td>
-            <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button" style="width:60px">Edit</button></a>
+              <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button" style="width:60px">Edit</button></a>
               <form action="/documents/{{$document->id}}" method="post" style="display: inline-block">
                 {{ csrf_field() }}
                 {{ method_field('delete') }}
@@ -36,6 +41,7 @@
         @endforeach
         </tbody>
       </table>
+
 
   </div>
 
