@@ -65,3 +65,5 @@
   </div>
 
 @endsection
+
+<script src="js/interactive_form.js"></script>

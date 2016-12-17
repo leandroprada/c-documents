@@ -9,7 +9,7 @@ use App\Document;
 class Transmittal extends Model
 {
 
-    protected $fillable =['number','user_id','document_id'];
+    protected $fillable =['number','document_id'];
 
     public function users(){
     return $this->belongsTo('App\User');

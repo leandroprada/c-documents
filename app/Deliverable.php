@@ -8,7 +8,7 @@ use App\Document;
 
 class Deliverable extends Model
 {
-  protected $fillable =['code','name', 'document_id', 'discipline_id'];
+  protected $fillable =['code','name', 'document_id'];
 
 
     public function documents(){

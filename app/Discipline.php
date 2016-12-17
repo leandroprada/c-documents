@@ -10,7 +10,7 @@ use App\Deliverable;
 
 class Discipline extends Model
 {
-  protected $fillable =['code','name', 'document_id', 'user_id', 'deliverable_id', 'division_id'];
+  protected $fillable =['code','name', 'document_id', 'user_id', 'deliverable_id'];
 
 
     public function documents(){
