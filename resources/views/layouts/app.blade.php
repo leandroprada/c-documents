@@ -19,7 +19,7 @@ $transmittals  = \App\Transmittal::all();
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'C-Docs') }}</title>
+    <title>{{ config('app.name', 'C-Documents') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -48,14 +48,14 @@ $transmittals  = \App\Transmittal::all();
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'C-Docs') }}
+                        {{ config('app.name', 'C-Documents') }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <a class="" href="{{ url('/') }}">
-                      <img src="/images/logo_white.jpg" height="50px"alt="">
+                      <img src="/images/icono.png" height="50px"alt="">
                           </a>
                     <ul class="nav navbar-nav">
                         &nbsp;

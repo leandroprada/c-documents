@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>C-Docs</title>
+        <title>C-Documents</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -109,9 +109,7 @@ margin: auto;
 
 
 
-              <div class="rd-dv">
-                  <img src="./images/logo_white.jpg " alt=""height ="100px" style="border-radius:10px;margin-right:200px">
-              </div>
+            
                 <!-- SIXTH EXAMPLE -->
                 <div class="rd-dv view view-sixth col-xs-12 col-md-3">
                     <img src="./images/blueprint.jpg" style="padding:none;display:inline-block;height:110%"/>

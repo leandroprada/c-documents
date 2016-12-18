@@ -49,6 +49,10 @@
         <input type="text" name="number" value="{{ old('number') }}" placeholder="0001" class="form-control">
       </div>
       <div class="form-group">
+        <label for="client_code">Client Code</label>
+        <input type="text" name="client_code" value="{{ old('client_code') }}" placeholder="Type Client Code" class="form-control">
+      </div>
+      <div class="form-group">
         <label for="revision">Revision</label>
         <input type="text" name="revision" value="{{ old('revision') }}"  placeholder="A" class="form-control">
       </div>
