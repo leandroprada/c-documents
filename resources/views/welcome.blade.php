@@ -35,9 +35,9 @@
             }
 
             .flex-center {
-                align-items: center;
+                /*align-items: center;*/
                 display: flex;
-                justify-content: center;
+                /*justify-content: center;*/
             }
 
             .position-ref {
@@ -64,7 +64,7 @@
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
-                text-decoration: none;
+                text-decoration: hidden;
                 text-transform: uppercase;
             }
 
@@ -79,8 +79,41 @@ margin: auto;
 
             }
             .rd-dv{
-              border-radius: 50px
+              border-radius: 15px;
+              visibility: hidden;
+              animation: fadeIn 0.3s;
+              max-height: 200px;
             }
+
+
+          .barra_lateral{
+            background-color: transparent;
+            position: fixed;
+            top: 25px;
+            left: 0;
+            width:125px;
+            height: 300px;
+          }
+
+          .tab {
+            height: 100px;
+            color: white
+          }
+          .buttons {
+            border: 0;
+  padding-top: 50px ;
+            text-decoration: hidden;
+            border-color: transparent;
+            color:red;
+            background-color: transparent;
+          }
+
+          @keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+
         </style>
     </head>
     <body >
@@ -91,6 +124,33 @@ margin: auto;
 
 
       </div> -->
+      <div class="barra_lateral container"
+>
+
+        <button type="button" name="button" class="buttons" id="button1" onclick="showDiv1();" >
+        <div class="tab center">
+
+Documents
+
+        </div></button>
+        <hr>
+        <button type="button" name="button" class="buttons" id="button2" onclick="showDiv2();"  >
+        <div class="tab center">
+
+Transmittals
+
+        </div></button>
+        <hr>
+         <button type="button" name="button" class="buttons" id="button3" onclick="showDiv3();"  >
+          <div class="tab center">
+
+  Reports
+
+          </div></button>
+          <hr>
+
+      </div>
+
 
         <div class="flex-center position-ref full-height container">
             @if (Route::has('login'))
@@ -109,37 +169,129 @@ margin: auto;
 
 
 
-            
                 <!-- SIXTH EXAMPLE -->
-                <div class="rd-dv view view-sixth col-xs-12 col-md-3">
-                    <img src="./images/blueprint.jpg" style="padding:none;display:inline-block;height:110%"/>
+                <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1">
+                    <img src="./images/blueprint.jpg" style="padding:none;display:block;height:110%"/>
 
                     <div class="mask">
                         <h2>Documents</h2>
-                        <p>Here you can create documents</p>
-                        <a href="/documents/create" class="info">New Document</a>
+                        <p>Project documents</p>
+                        <a href="/documents/create" class="info">Create</a>
+                        <a href="/documents/view" class="info">View List</a>
                     </div>
                 </div>
 
-                <div class="rd-dv view view-sixth  col-xs-12 col-md-3">
-                    <img src="./images/transmittal.jpg" style="padding:none;display:inline-block"/>
+                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div2" >
+                    <img src="./images/transmittal.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
                         <h2>Transmittals</h2>
-                        <p>Here you can create Transmittals</p>
-                        <a href="/transmittals/create" class="info">New Transmittal</a>
+                        <p>Create Transmittals</p>
+                        <a href="/transmittals/create" class="info">Here</a>
                     </div>
                 </div>
 
-                <div class="rd-dv view view-sixth  col-xs-12 col-md-3">
-                    <img src="./images/reports.jpg" style="padding:none;display:inline-block"/>
+                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div3" >
+                    <img src="./images/reports.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
                         <h2>Reports</h2>
-                        <p>Here you can view Reports</p>
-                        <a href="/reports/" class="info">Enter</a>
+                        <p>View Reports</p>
+                        <a href="/reports/" class="info">Here</a>
                     </div>
                 </div>
                     </div>
+
+                    <script type="text/javascript">
+                      var button1 = document.getElementById('button1');
+                      var button2 = document.getElementById('button2');
+                      var button3 = document.getElementById('button3');
+
+                      var div1 = document.getElementById('div1');
+                      var div2 = document.getElementById('div2');
+                      var div3 = document.getElementById('div3');
+
+                      function hideAllDivs() {
+                           div1.style.visibility = 'hidden';
+                           div2.style.visibility = 'hidden';
+                           div3.style.visibility = 'hidden';
+                     }
+
+                     function hideAllDivsinicial() {
+                          div1.style.visibility = 'hidden';
+                          div2.style.visibility = 'hidden';
+                          div3.style.visibility = 'hidden';
+                    }
+                       function showDiv1() {
+                        if(div1.style.visibility == 'hidden')
+                        {
+                           div1.style.visibility = 'visible';
+                           div2.style.visibility = 'hidden';
+                           div3.style.visibility = 'hidden';
+                        }
+                        else
+                        {   div1.style.visibility = 'hidden';
+                        div2.style.visibility = 'hidden';
+                        div3.style.visibility = 'hidden';
+
+                       }
+
+                     }
+                      function showDiv2() {
+                        if(div2.style.visibility == 'hidden')
+                        {
+                           div1.style.visibility = 'hidden';
+                           div2.style.visibility = 'visible';
+                           div3.style.visibility = 'hidden';
+                        }
+                        else
+                        {   div2.style.visibility = 'hidden';
+                       }
+
+                     }
+                      function showDiv3() {
+                        if(div3.style.visibility == 'hidden')
+                        {
+                           div1.style.visibility = 'hidden';
+                           div2.style.visibility = 'hidden';
+                           div3.style.visibility = 'visible';
+                        }
+                        else
+                        {   div3.style.visibility = 'hidden';
+                       }
+
+                     }
+
+                     var showDivInicial1 = function() {
+                       var div1 = document.getElementById('div1');
+                       div1.style.visibility ="visible" ;
+
+                     }
+                     var showDivInicial2 = function() {
+                       var div2 = document.getElementById('div2');
+                       div2.style.visibility ="visible" ;
+                       div2.style.top="200px";
+                     }
+                     var showDivInicial3 = function() {
+                       var div3 = document.getElementById('div3');
+                       div3.style.visibility ="visible" ;
+                       div3.style.top="400px";
+
+                     }
+                       setTimeout(showDivInicial1, 1000);
+                       setTimeout(showDivInicial2, 2500);
+                       setTimeout(showDivInicial3, 3500);
+                       setTimeout(hideAllDivsinicial,4500);
+
+
+
+
+
+
+
+                    </script>
+                    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     </body>
 </html>

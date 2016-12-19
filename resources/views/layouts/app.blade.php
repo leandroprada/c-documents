@@ -98,6 +98,7 @@ $transmittals  = \App\Transmittal::all();
     </div>
 
     <!-- Scripts -->
+
     <script src="/js/app.js"></script>
 </body>
 </html>
