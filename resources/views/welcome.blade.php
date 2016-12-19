@@ -118,7 +118,7 @@ color:white;
 
 }
 .panel-body {
-border-radius:20px;  
+border-radius:20px;
 }
 
         </style>
@@ -166,7 +166,7 @@ Transmittals
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('/register') }}" style="color:lightgrey;">Register</a>
                     @endif
                 </div>
             @endif

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<?php $statuses  = \App\Status::all(); ?>
 @section('content')
   <div class="container">
     @if (!Auth::check())
@@ -10,8 +10,21 @@
         </div>
          @else
 <div class="row">
-  <div class="ol-xs-4">
+  <div class="col-xs-4">
     <h1>DL - Document List </h1>
+  </div>
+  <div class="status_list">
+    <table class="table">
+      <tr>
+          Document Statuses:
+      </tr>
+            @foreach($statuses as $status)
+      <tr><td>
+         {{ $status->id }} : {{ $status->name }}</td> </tr>
+       @endforeach
+
+    </table>
+
   </div>
 <div class="col-xs-3 col-xs-offset-8  col-md-2 col-md-offset-10"> <button type="button"class="btn btn-success btn-lg" name="button"  ><a href="/documents/create" style="text-decoration:none; color:white" >New Document</a></button></div>
 </div>
@@ -37,13 +50,20 @@
             @if (Auth::user()->role_id === 1)
             <td>
               <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button" style="width:60px">Edit</button></a>
-              <form action="/documents/{{$document->id}}" method="post" style="display: inline-block">
+
+              <a href="/documents/create" ><button type="button"class="btn btn-warning btn-xs" name="button" style="width:60px">Version</button></a>
+  </td>
+  <td>        <form action="/documents/{{$document->id}}" method="post" style="display: inline-block;">
                 {{ csrf_field() }}
                 {{ method_field('delete') }}
                 <input type="submit" name="Borrar" value="Delete" class="btn btn-danger btn-xs" style="display: inline-block; width:60px">
               </form>
             </td>
-            @endif
+
+              @endif
+
+
+
           </tr>
         @endforeach
         </tbody>

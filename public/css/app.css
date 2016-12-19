@@ -63,3 +63,13 @@ background-color: #494a4a;
 color:white
 
      }
+
+     .status_list{
+       position: fixed;
+       left: 0px;
+       font-size: 0.7em;
+       top:100px;
+       z-index: 2;
+       width: 150px;
+       font-size:
+     }
