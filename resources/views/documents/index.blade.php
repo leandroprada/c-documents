@@ -42,7 +42,7 @@
       <tbody>
         @foreach($documents as $document)
           <tr>
-            <td>{{ $document->project->code }}-{{ $document->division->code }}-{{ $document->discipline->code }}-{{ $document->number }}</td>
+            <td>{{ $document->full_number }}</td>
             <td>{{ $document->title }}</td>
             <td>{{ $document->revision }}</td>
             <td>{{ $document->revision_date }}</td>
