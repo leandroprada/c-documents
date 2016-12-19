@@ -2,6 +2,13 @@
 
 @section('content')
   <div class="container">
+    @if (!Auth::check())
+
+    <div class="alert alert-danger" role="alert">
+        <h2 class="alert-heading">Please login</h2>
+        <h4 >Some features require being logged in to the system.</h4>
+        </div>
+         @else
     <h1>{{ $transmittal->name }}</h1>
 
     <div class="row">
@@ -13,9 +20,6 @@
         <h3>Title</h3>
         <p>{{ $transmittal->title }}</p>
 
-        <h3>Area</h3>
-        <p>{{ $transmittal->area->name }}</p>
-
         <h3>Discipline</h3>
         <p>{{ $transmittal->discipline->name }}</p>
 
@@ -25,7 +29,7 @@
 
       </div>
 
-
+@endif
 
     </div>
 

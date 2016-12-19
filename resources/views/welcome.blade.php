@@ -112,7 +112,14 @@ margin: auto;
     from { opacity: 0; }
       to { opacity: 1; }
 }
+.loggedin{
+background-color: #494a4a;
+color:white;
 
+}
+.panel-body {
+border-radius:20px;  
+}
 
         </style>
     </head>

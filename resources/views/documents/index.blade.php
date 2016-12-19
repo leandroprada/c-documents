@@ -2,6 +2,13 @@
 
 @section('content')
   <div class="container">
+    @if (!Auth::check())
+
+    <div class="alert alert-danger" role="alert">
+        <h2 class="alert-heading">Please login</h2>
+        <h4 >Some features require being logged in to the system.</h4>
+        </div>
+         @else
 <div class="row">
   <div class="ol-xs-4">
     <h1>DL - Document List </h1>
@@ -42,7 +49,7 @@
         </tbody>
       </table>
 
-
+@endif
   </div>
 
 @endsection

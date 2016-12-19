@@ -3,6 +3,13 @@
 @section('content')
 
   <div class="container">
+    @if (!Auth::check())
+
+    <div class="alert alert-danger" role="alert">
+        <h2 class="alert-heading">Please login</h2>
+        <h4 >Some features require being logged in to the system.</h4>
+        </div>
+         @else
     <form action="/documents/{{$document->id}}" method="post" class="form-horizontal">
       {{ csrf_field() }}
       {{ method_field('patch') }}
@@ -66,6 +73,7 @@
       </div>
 
     </form>
+@endif
   </div>
 
 @endsection

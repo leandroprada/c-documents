@@ -1,25 +1,13 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
+<div class="container" style="position:fixed;float:none;top:0px;right:0px">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">C-Documents - Documents you see</div>
+        <div class="col-md-2 col-md-offset-6">
 
-                <div class="panel-body">
+                <div class="panel-body loggedin">
                     You are Logged in!
 
                 </div>
-                <div class=" panel-body links">
-                  <a href="documents/">Documents</a>
-                  <a href="transmittals/">Transmittals</a>
-                  <a href="reports/">Reports</a>
-
-                </div>
-
-            </div>
         </div>
     </div>
 </div>
-@endsection
+@include('welcome')

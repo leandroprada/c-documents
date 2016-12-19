@@ -5,7 +5,11 @@
 
 <div class="container">
     @if (!Auth::check())
-        <h2>Please login to access this feature</h2>
+
+    <div class="alert alert-danger" role="alert">
+        <h2 class="alert-heading">Please login</h2>
+        <h4 >Some features require being logged in to the system.</h4>
+        </div>
          @else
     <form action="/documents" method="post" class="form-horizontal">
       {{ csrf_field() }}
