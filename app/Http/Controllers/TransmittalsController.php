@@ -9,7 +9,7 @@ use App\Transmittal;
 class TransmittalsController extends Controller
 {
 
-  
+
       /**
        * Display a listing of the resource.
        *
@@ -28,15 +28,10 @@ class TransmittalsController extends Controller
        */
       public function create()
       {
-          $roles = \App\Role::all();
-          $areas = \App\Area::all();
-          $deliverables  = \App\Deliverable::all();
+
           $disciplines  = \App\Discipline::all();
           $documents  = \App\Document::all();
-          $divisions  = \App\Division::all();
-          $statuses  = \App\Status::all();
-          $projects  = \App\Project::all();
-          return view('transmittals.form', compact('roles', 'areas','areas','deliverables','disciplines','divisions','statuses','projects'));
+          return view('transmittals.form', compact('documents','disciplines'));
       }
 
       /**
@@ -53,7 +48,7 @@ class TransmittalsController extends Controller
           $data['user_id'] = \Auth::id();
           $transmittal = Transmittal::create($data);
           */
-          // $transmittal->materials()->sync($request->input('materials'));
+          // $transmittal->documents()->sync($request->input('documents'));
           return redirect('transmittals');
       }
 
@@ -65,7 +60,7 @@ class TransmittalsController extends Controller
        */
       public function show(Transmittal $transmittal)
       {
-          return view('transmittals.show', compact('transmittal'));
+          return view('transmittals.show', compact('transmittals'));
       }
 
       /**

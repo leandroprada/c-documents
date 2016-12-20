@@ -165,7 +165,7 @@ Transmittals
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
+                          <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}" style="color:lightgrey;">Register</a>
                     @endif
                 </div>
@@ -175,6 +175,12 @@ Transmittals
 
 
 
+            <div class=" rd-dv col-xs-12" style="position:fixed; top:270px; left:10%" id="div4">
+              <b style="font-size:2em;font-weight:bolder;font-family:Oswald;padding:none;display:block">
+              @if (!Auth::check())  PLEASE LOGIN     @endif
+              @if (Auth::check())  YOU ARE LOGGED IN!    @endif
+              </b>
+            </div>
 
                 <!-- SIXTH EXAMPLE -->
                 <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1">
@@ -285,9 +291,15 @@ Transmittals
                        div3.style.top="400px";
 
                      }
+                     var showDiv4 = function() {
+                       var div4 = document.getElementById('div4');
+                       div4.style.visibility ="visible" ;
+
+                     }
                        setTimeout(showDivInicial1, 1000);
                        setTimeout(showDivInicial2, 2500);
                        setTimeout(showDivInicial3, 3500);
+                       setTimeout(showDiv4, 5500);
                        setTimeout(hideAllDivsinicial,4500);
 
 
@@ -297,8 +309,8 @@ Transmittals
 
 
                     </script>
-                    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
 </html>

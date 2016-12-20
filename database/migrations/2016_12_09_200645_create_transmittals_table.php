@@ -16,7 +16,7 @@ class CreateTransmittalsTable extends Migration
         Schema::create('transmittals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('number',255);
-            $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->integer('discipline_id')->unsigned()->index()->nullable();
             $table->integer('document_id')->unsigned()->index()->nullable();
 
             $table->timestamps();

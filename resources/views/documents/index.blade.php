@@ -1,5 +1,7 @@
 @extends('layouts.app')
 <?php $statuses  = \App\Status::all(); ?>
+<?php $roles  = \App\Role::all(); ?>
+<?php $documents  = \App\Document::all(); ?>
 @section('content')
   <div class="container">
     @if (!Auth::check())
@@ -47,7 +49,7 @@
             <td>{{ $document->revision }}</td>
             <td>{{ $document->revision_date }}</td>
             <td>{{ $document->status_id }}</td>
-            @if (Auth::user()->role_id === 1)
+            <!-- @if (Auth::user()->role === 1) -->
             <td>
               <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button" style="width:60px">Edit</button></a>
 
@@ -60,7 +62,7 @@
               </form>
             </td>
 
-              @endif
+              <!-- @endif -->
 
 
 

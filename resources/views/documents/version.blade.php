@@ -46,14 +46,6 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="deliverable_id">Deliverable</label>
-        <select name="deliverable_id" id="deliverable_id" class="form-control" onblur="completar();">
-          @foreach($deliverables as $deliverable)
-            <option value="{{ $deliverable->id }}">{{ $deliverable->code }}- {{$deliverable->name}}</option>
-          @endforeach
-        </select>
-      </div>
-      <div class="form-group">
         <label for="area_id">Area</label>
         <select name="area_id" id="area_id" class="form-control" onblur="completar();">
           @foreach($areas as $area)
@@ -107,7 +99,6 @@
     project = document.getElementById("project_id");
     division = document.getElementById("division_id");
     discipline = document.getElementById("discipline_id");
-    deliverable = document.getElementById("deliverable_id");
     area = document.getElementById("area_id");
     numberValue = document.getElementById("number");
     full_number = document.getElementById("full_number");
@@ -123,12 +114,6 @@
     if (division.selectedIndex !==0) {
         divisionText= division.options[division.selectedIndex].text
         divisionText = divisionText.substring(0, 3);
-
-      }
-      else {deliverableText = ""}
-    if (deliverable.selectedIndex !==0) {
-        deliverableText= deliverable.options[deliverable.selectedIndex].text
-        deliverableText = deliverableText.substring(0, 2);
 
       }
       else {divisionText = ""}
@@ -150,11 +135,10 @@
     tp = projectText.trim();
     td1 = divisionText.trim();
     td2 = disciplineText.trim();
-    td3 = deliverableText.trim();
     ta = areaText.trim();
     tn = numberText.trim();
   //damos valor a la descripcion;
-    var desc = tp+"-"+td1+"-"+td2+"-"+td3+"-"+ta+"-"+tn;
+    var desc = tp+"-"+td1+"-"+td2+"-"+ta+"-"+tn;
     var descripcionSinGuiones =desc.replace( "  ", "")
 full_number.value = desc;
   // function valoresDeDesc() {

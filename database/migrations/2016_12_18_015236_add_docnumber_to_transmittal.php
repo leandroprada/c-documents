@@ -14,8 +14,8 @@ class AddDocnumberToTransmittal extends Migration
     public function up()
     {
         Schema::table('transmittals', function (Blueprint $table) {
-          $table->string('client_code',255);
-            
+          // $table->string('client_code',255);
+
         });
     }
 

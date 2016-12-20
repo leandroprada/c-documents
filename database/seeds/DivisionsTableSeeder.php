@@ -12,6 +12,8 @@ class DivisionsTableSeeder extends Seeder
     public function run()
     {
       DB::table('divisions')->insert([
+        ['code' => 'XX','name' => 'Please Select a Division',
+        ],
         ['code' => 'ENG',
         'name' => 'Engineering',
       ],['code' => 'ADM',

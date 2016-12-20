@@ -12,6 +12,8 @@ class DisciplinesTableSeeder extends Seeder
     public function run()
     {
       DB::table('disciplines')->insert([
+        ['code' => 'XX','name' => 'Please Select a Discipline',
+        ],
 ['code' => 'ARC','name' => 'A: Architecture',
 ],['code' => 'ARC','name' => 'C: Concrete Structures (Civil)',
 ],['code' => 'ITS','name' => 'D: IT',

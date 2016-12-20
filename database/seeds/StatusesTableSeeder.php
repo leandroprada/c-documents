@@ -12,6 +12,8 @@ class StatusesTableSeeder extends Seeder
     public function run()
     {
       DB::table('statuses')->insert([
+        ['code' => 'XX','name' => 'Please Select a Status',
+        ],
         [
         'code' => 'WIP',
         'name' => 'WIP - Work In Progress',

@@ -12,6 +12,8 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
       DB::table('projects')->insert([
+        ['code' => 'XX','name' => 'Please Select a Project',
+        ],
 [
         'code' => 'OIG',
         'name' => 'Oil and Gas Plant',

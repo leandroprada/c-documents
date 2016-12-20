@@ -12,7 +12,8 @@ class AreasTableSeeder extends Seeder
     public function run()
     {
       DB::table('areas')->insert([
-        [
+        ['code' => 'XX','name' => 'Please Select an Area',
+        ],[
          'code' => '0100',
          'name' => 'Facilities',
        ],[

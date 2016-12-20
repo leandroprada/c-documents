@@ -12,7 +12,8 @@ class DeliverablesTableSeeder extends Seeder
     public function run()
     {
 DB::table('deliverables')->insert([
-['code' => 'AO','name' => 'Analysis of bids',
+['code' => 'XX','name' => 'Please Select a Deliverable',
+],[  'code' => 'AO','name' => 'Analysis of bids',
 ],['code' => 'CA','name' => 'Calculation sheet',
 ],['code' => 'CR','name' => 'Sketch',
 ],['code' => 'DB','name' => 'Data Book',
