@@ -79,7 +79,7 @@ margin: auto;
 
             }
             .rd-dv{
-              border-radius: 15px;
+              border-radius: 25px;
               visibility: hidden;
               animation: fadeIn 0.3s;
               max-height: 200px;
@@ -118,7 +118,15 @@ color:white;
 
 }
 .panel-body {
-border-radius:20px;
+border-radius:5px;
+}
+
+.rd-dv::before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border: 0.8em solid transparent;
+	position: absolute;
 }
 
         </style>
@@ -184,8 +192,11 @@ Transmittals
 
                 <!-- SIXTH EXAMPLE -->
                 <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1">
-                    <img src="./images/blueprint.jpg" style="padding:none;display:block;height:110%"/>
+                    <img id="imgdiv1" src="./images/blueprint.jpg" style="padding:none;display:block;height:110%"/>
+                    <div class="view">
+                        <h2>Documents</h2>
 
+                    </div>
                     <div class="mask">
                         <h2>Documents</h2>
                         <p>Project documents</p>
@@ -195,7 +206,7 @@ Transmittals
                 </div>
 
                 <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div2" >
-                    <img src="./images/transmittal.jpg" style="padding:none;display:block"/>
+                    <img id="imgdiv2" src="./images/transmittal.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
                         <h2>Transmittals</h2>
@@ -205,7 +216,7 @@ Transmittals
                 </div>
 
                 <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div3" >
-                    <img src="./images/reports.jpg" style="padding:none;display:block"/>
+                    <img id="imgdiv3" src="./images/reports.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
                         <h2>Reports</h2>
@@ -224,16 +235,25 @@ Transmittals
                       var div2 = document.getElementById('div2');
                       var div3 = document.getElementById('div3');
 
+                      var imgdiv1 = document.getElementById('imgdiv1');
+                      var imgdiv2 = document.getElementById('imgdiv2');
+                      var imgdiv3 = document.getElementById('imgdiv3');
+
                       function hideAllDivs() {
                            div1.style.visibility = 'hidden';
                            div2.style.visibility = 'hidden';
                            div3.style.visibility = 'hidden';
-                     }
+                          }
 
                      function hideAllDivsinicial() {
                           div1.style.visibility = 'hidden';
                           div2.style.visibility = 'hidden';
                           div3.style.visibility = 'hidden';
+
+                          imgdiv1.src = "";
+                          imgdiv2.src = "";
+                          imgdiv3.src = "";
+
                     }
                        function showDiv1() {
                         if(div1.style.visibility == 'hidden')

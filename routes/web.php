@@ -24,3 +24,4 @@ Route::resource('documents', 'DocumentsController');
 // Route::post('documents/{id}/images', 'DocumentsController@images');
 
 Route::resource('transmittals', 'TransmittalsController');
+Route::resource('reports', 'ReportsController');
