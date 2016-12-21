@@ -13,18 +13,21 @@ class CreateDocumentsTable extends Migration
      */
     public function up()
     {
+
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title',255);
             $table->string('number',255);
+            $table->string('full_number',255);
             $table->string('revision',255);
             $table->string('revision_date',255);
             $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->integer('area_id')->unsigned()->index()->nullable();
-            $table->integer('discipline_id')->unsigned()->index()->nullable();
-            $table->integer('status_id')->unsigned()->index()->nullable();
-            $table->integer('project_id')->unsigned()->index()->nullable();
+            $table->integer('area_id')->unsigned()->index();
+            $table->integer('discipline_id')->unsigned()->index();
+            $table->integer('division_id')->unsigned()->index();
+            $table->integer('project_id')->unsigned()->index();
             $table->integer('transmittal_id')->unsigned()->index()->nullable();
+            $table->integer('status_id')->unsigned()->index();
             $table->timestamps();
         });
     }

@@ -12,108 +12,108 @@ class DeliverablesTableSeeder extends Seeder
     public function run()
     {
 DB::table('deliverables')->insert([
-['code' => 'XX','name' => 'Please Select a Deliverable',
-],[  'code' => 'AO','name' => 'Analysis of bids',
-],['code' => 'CA','name' => 'Calculation sheet',
-],['code' => 'CR','name' => 'Sketch',
-],['code' => 'DB','name' => 'Data Book',
-],['code' => 'DT','name' => 'Detailed drawing',
-],['code' => 'EI','name' => 'Engineering estimation',
-],['code' => 'GE','name' => 'Miscellaneous',
-],['code' => 'HD','name' => 'Data sheet',
-],['code' => 'KP','name' => 'Key plan',
-],['code' => 'LE','name' => 'List of equipment',
-],['code' => 'LS','name' => 'List of deliverables',
-],['code' => 'LY','name' => 'Layout',
-],['code' => 'ME','name' => 'Report / Project narrative',
-],['code' => 'MN','name' => 'Operating or maintenance manual',
-],['code' => 'MO','name' => 'Assembly / disassembly drawing',
-],['code' => 'MR','name' => 'Material requisition',
-],['code' => 'PM','name' => 'Materials sheet',
-],['code' => 'SP','name' => 'Technical specification',
-],['code' => 'SR','name' => 'Service Requisitions',
-],['code' => 'TP','name' => 'Typical drawings',
-],['code' => 'PC','name' => 'Spreadsheet',
-],['code' => 'PR','name' => 'Procedures',
-],['code' => 'RV','name' => 'Surveys',
-],['code' => 'CP','name' => ' Doors & Windows Schedule',
-],['code' => 'CT','name' => 'Sectional and detailed drawing',
-],['code' => 'FR','name' => 'Elevations',
-],['code' => 'IS','name' => 'Sanitary Installations',
-],['code' => 'LO','name' => 'Room Drawings',
-],['code' => 'RP','name' => 'Floor & Roof Plans',
-],['code' => 'TC','name' => 'Doors & Windows Details',
-],['code' => 'AC','name' => 'Metal Sheet Advantaging',
-],['code' => 'AF','name' => 'Wroughts Drawings',
-],['code' => 'EF','name' => 'Spheres Drawings',
-],['code' => 'EX','name' => 'Exchangers Drawings',
-],['code' => 'RA','name' => 'Reactors Drawings',
-],['code' => 'RC','name' => 'Vessel Drawings',
-],['code' => 'TQ','name' => 'Tanks Drawings',
-],['code' => 'TR','name' => 'Towers Drawings',
-],['code' => 'CS','name' => 'Standard & Special Supports',
-],['code' => 'DG','name' => 'General Diagram',
-],['code' => 'IT','name' => 'Isometrics Book',
-],['code' => 'LL','name' => 'Line Lists',
-],['code' => 'PF','name' => 'Prefabricated Books',
-],['code' => 'PL','name' => 'Plant Cuts & Elevations',
-],['code' => 'PP','name' => 'Plot Plan',
-],['code' => 'PS','name' => 'Supports Locations',
-],['code' => 'TI','name' => 'List of tie-ins',
-],['code' => 'DW','name' => 'Work schedule',
-],['code' => 'CM','name' => 'Materials Catalog',
-],['code' => 'DE','name' => 'Interconection Diagrams',
-],['code' => 'DF','name' => 'Functional Diagrams',
-],['code' => 'DL','name' => 'Logic Diagrams',
-],['code' => 'EM','name' => 'Multi Line Diagrams',
-],['code' => 'EU','name' => 'One Line Diagrams',
-],['code' => 'IC','name' => 'Canalizations',
-],['code' => 'IL','name' => 'Lighting Installations',
-],['code' => 'IP','name' => 'Grounding Details',
-],['code' => 'LC','name' => 'Cable Lists',
-],['code' => 'LD','name' => 'Channeling-Conduits Lists',
-],['code' => 'XA','name' => 'Classification of Areas',
-],['code' => 'AP','name' => 'Exploded View Drawings',
-],['code' => 'BP','name' => 'Anchor Bolts Position Drawings',
-],['code' => 'CO','name' => 'Assembly Drawings',
-],['code' => 'CT','name' => 'Sectional & Details Drawings',
-],['code' => 'PL','name' => 'Floor plan',
-],['code' => 'SC','name' => 'Subset Drawings',
-],['code' => 'AR','name' => 'Reinforcement Drawings',
-],['code' => 'EA','name' => 'Formwork & Reinforcement Drawings',
-],['code' => 'EN','name' => 'Formwork Drawings',
-],['code' => 'IM','name' => 'Inserts & Metallic Elements',
-],['code' => 'PC','name' => 'Material Take Off',
-],['code' => 'PH','name' => 'Bar Bending Schedules',
-],['code' => 'DM','name' => 'Demolition',
-],['code' => 'PB','name' => 'Bolt sheet',
-],['code' => 'FA','name' => 'Fabrication Drawings',
-],['code' => 'IE','name' => 'Engineering Drawings',
-],['code' => 'PC','name' => 'Material Take Off',
-],['code' => 'SC','name' => 'Subset Drawings',
-],['code' => 'CE','name' => 'Cause Effect',
-],['code' => 'DE','name' => 'Interconection Diagrams',
-],['code' => 'DF','name' => 'Functional Diagrams',
-],['code' => 'DL','name' => 'Logic Diagrams',
-],['code' => 'IC','name' => 'Canalizations',
-],['code' => 'IN','name' => 'Installation Designs',
-],['code' => 'IP','name' => 'Grounding Details',
-],['code' => 'LI','name' => 'Instruments Lists',
-],['code' => 'LC','name' => 'Cable List',
-],['code' => 'LP','name' => 'Control Loop Diagrams',
-],['code' => 'SD','name' => 'Operator Screens',
-],['code' => 'TA','name' => 'List, graphics and information',
-],['code' => 'TD','name' => 'Typical Designing',
-],['code' => 'TE','name' => 'Electrical Typical Drawings',
-],['code' => 'TM','name' => 'Mechanical Typical Drawings',
-],['code' => 'DD','name' => 'Utilities Distribution Diagrams',
-],['code' => 'DI','name' => 'Interconnection Diagrams',
-],['code' => 'DP','name' => 'Piping & Instruments Diagrams',
-],['code' => 'FD','name' => 'Process Diagrams',
-],['code' => 'LL','name' => 'Line Lists',
-],['code' => 'TI','name' => 'Tie-in Lists',
-],['code' => 'AS','name' => 'Alignment Sheets',
-],['code' => 'XS','name' => 'Special Crossings',
+['code' => 'XX','name' => 'Please Select a Deliverable'
+],['code' => 'AO','name' => 'Analysis of bids'
+],['code' => 'CA','name' => 'Calculation sheet'
+],['code' => 'CR','name' => 'Sketch'
+],['code' => 'DB','name' => 'Data Book'
+],['code' => 'DT','name' => 'Detailed drawing'
+],['code' => 'EI','name' => 'Engineering estimation'
+],['code' => 'GE','name' => 'Miscellaneous'
+],['code' => 'HD','name' => 'Data sheet'
+],['code' => 'KP','name' => 'Key plan'
+],['code' => 'LE','name' => 'List of equipment'
+],['code' => 'LS','name' => 'List of deliverables'
+],['code' => 'LY','name' => 'Layout'
+],['code' => 'ME','name' => 'Report / Project narrative'
+],['code' => 'MN','name' => 'Operating or maintenance manual'
+],['code' => 'MO','name' => 'Assembly / disassembly drawing'
+],['code' => 'MR','name' => 'Material requisition'
+],['code' => 'PM','name' => 'Materials sheet'
+],['code' => 'SP','name' => 'Technical specification'
+],['code' => 'SR','name' => 'Service Requisitions'
+],['code' => 'TP','name' => 'Typical drawings'
+],['code' => 'PC','name' => 'Spreadsheet'
+],['code' => 'PR','name' => 'Procedures'
+],['code' => 'RV','name' => 'Surveys'
+],['code' => 'CP','name' => ' Doors & Windows Schedule'
+],['code' => 'CT','name' => 'Sectional and detailed drawing'
+],['code' => 'FR','name' => 'Elevations'
+],['code' => 'IS','name' => 'Sanitary Installations'
+],['code' => 'LO','name' => 'Room Drawings'
+],['code' => 'RP','name' => 'Floor & Roof Plans'
+],['code' => 'TC','name' => 'Doors & Windows Details'
+],['code' => 'AC','name' => 'Metal Sheet Advantaging'
+],['code' => 'AF','name' => 'Wroughts Drawings'
+],['code' => 'EF','name' => 'Spheres Drawings'
+],['code' => 'EX','name' => 'Exchangers Drawings'
+],['code' => 'RA','name' => 'Reactors Drawings'
+],['code' => 'RC','name' => 'Vessel Drawings'
+],['code' => 'TQ','name' => 'Tanks Drawings'
+],['code' => 'TR','name' => 'Towers Drawings'
+],['code' => 'CS','name' => 'Standard & Special Supports'
+],['code' => 'DG','name' => 'General Diagram'
+],['code' => 'IT','name' => 'Isometrics Book'
+],['code' => 'LL','name' => 'Line Lists'
+],['code' => 'PF','name' => 'Prefabricated Books'
+],['code' => 'PL','name' => 'Plant Cuts & Elevations'
+],['code' => 'PP','name' => 'Plot Plan'
+],['code' => 'PS','name' => 'Supports Locations'
+],['code' => 'TI','name' => 'List of tie-ins'
+],['code' => 'DW','name' => 'Work schedule'
+],['code' => 'CM','name' => 'Materials Catalog'
+],['code' => 'DE','name' => 'Interconection Diagrams'
+],['code' => 'DF','name' => 'Functional Diagrams'
+],['code' => 'DL','name' => 'Logic Diagrams'
+],['code' => 'EM','name' => 'Multi Line Diagrams'
+],['code' => 'EU','name' => 'One Line Diagrams'
+],['code' => 'IC','name' => 'Canalizations'
+],['code' => 'IL','name' => 'Lighting Installations'
+],['code' => 'IP','name' => 'Grounding Details'
+],['code' => 'LC','name' => 'Cable Lists'
+],['code' => 'LD','name' => 'Channeling-Conduits Lists'
+],['code' => 'XA','name' => 'Classification of Areas'
+],['code' => 'AP','name' => 'Exploded View Drawings'
+],['code' => 'BP','name' => 'Anchor Bolts Position Drawings'
+],['code' => 'CO','name' => 'Assembly Drawings'
+],['code' => 'CT','name' => 'Sectional & Details Drawings'
+],['code' => 'PL','name' => 'Floor plan'
+],['code' => 'SC','name' => 'Subset Drawings'
+],['code' => 'AR','name' => 'Reinforcement Drawings'
+],['code' => 'EA','name' => 'Formwork & Reinforcement Drawings'
+],['code' => 'EN','name' => 'Formwork Drawings'
+],['code' => 'IM','name' => 'Inserts & Metallic Elements'
+],['code' => 'PC','name' => 'Material Take Off'
+],['code' => 'PH','name' => 'Bar Bending Schedules'
+],['code' => 'DM','name' => 'Demolition'
+],['code' => 'PB','name' => 'Bolt sheet'
+],['code' => 'FA','name' => 'Fabrication Drawings'
+],['code' => 'IE','name' => 'Engineering Drawings'
+],['code' => 'PC','name' => 'Material Take Off'
+],['code' => 'SC','name' => 'Subset Drawings'
+],['code' => 'CE','name' => 'Cause Effect'
+],['code' => 'DE','name' => 'Interconection Diagrams'
+],['code' => 'DF','name' => 'Functional Diagrams'
+],['code' => 'DL','name' => 'Logic Diagrams'
+],['code' => 'IC','name' => 'Canalizations'
+],['code' => 'IN','name' => 'Installation Designs'
+],['code' => 'IP','name' => 'Grounding Details'
+],['code' => 'LI','name' => 'Instruments Lists'
+],['code' => 'LC','name' => 'Cable List'
+],['code' => 'LP','name' => 'Control Loop Diagrams'
+],['code' => 'SD','name' => 'Operator Screens'
+],['code' => 'TA','name' => 'List, graphics and information'
+],['code' => 'TD','name' => 'Typical Designing'
+],['code' => 'TE','name' => 'Electrical Typical Drawings'
+],['code' => 'TM','name' => 'Mechanical Typical Drawings'
+],['code' => 'DD','name' => 'Utilities Distribution Diagrams'
+],['code' => 'DI','name' => 'Interconnection Diagrams'
+],['code' => 'DP','name' => 'Piping & Instruments Diagrams'
+],['code' => 'FD','name' => 'Process Diagrams'
+],['code' => 'LL','name' => 'Line Lists'
+],['code' => 'TI','name' => 'Tie-in Lists'
+],['code' => 'AS','name' => 'Alignment Sheets'
+],['code' => 'XS','name' => 'Special Crossings'
 ],['code' => 'PQ','name' => 'Procedure Qualification'
 ]
 ]);

@@ -8,7 +8,7 @@ use App\Document;
 
 class Area extends Model
 {
-  protected $fillable =['code','name','document_id'];
+  protected $fillable =['code','name','project_id'];
 
 
 

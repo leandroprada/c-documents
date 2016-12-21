@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Document;
 class Status extends Model
 {
-  protected $fillable =['name', 'document_id'];
+  protected $fillable =['code','name'];
 
 
     public function documents(){

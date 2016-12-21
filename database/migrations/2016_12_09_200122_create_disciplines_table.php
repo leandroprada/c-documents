@@ -17,9 +17,7 @@ class CreateDisciplinesTable extends Migration
             $table->increments('id');
             $table->string('code',255);
             $table->string('name',255);
-            $table->integer('document_id')->unsigned()->index()->nullable();
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->integer('deliverable_id')->unsigned()->index()->nullable();
+            $table->integer('division_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });
     }

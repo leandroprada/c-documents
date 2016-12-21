@@ -20,6 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('project_id')->unsigned()->index()->nullable();
+            $table->integer('division_id')->unsigned()->index()->nullable();
+            $table->integer('discipline_id')->unsigned()->index()->nullable();
+            $table->integer('role_id')->unsigned()->index()->nullable();
+
+
         });
     }
 

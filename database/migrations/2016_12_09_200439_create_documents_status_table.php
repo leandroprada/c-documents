@@ -17,7 +17,6 @@ class CreateDocumentsStatusTable extends Migration
             $table->increments('id');
             $table->string('code',255);
             $table->string('name',255);
-            $table->integer('document_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });
     }

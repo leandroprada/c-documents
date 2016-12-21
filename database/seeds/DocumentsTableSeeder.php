@@ -12,19 +12,53 @@ class DocumentsTableSeeder extends Seeder
     public function run()
     {
       DB::table('documents')->insert([
+[
+        'title' => 'Especificación del sistema',
+        'number' => '0001',
+        'full_number' => '5940-ENG-C-TO-0300-0001',
+        'revision' => 'A',
+        'revision_date' => '2016-15-15',
+        'user_id' => '1',
+        'area_id' => '2',
+        'discipline_id' => '3',
+        'division_id' => '4',
+        'project_id' => '2',
+        'transmittal_id' => '1',
+        'status_id' => '1'
+],
+[
+        'title' => 'Especificación del la Arquitectura',
+        'number' => '0001',
+        'full_number' => '5940-ENG-S-SP-0200-0001',
+        'revision' => 'A',
+        'revision_date' => '2016-15-15',
+        'user_id' => '1',
+        'area_id' => '3',
+        'discipline_id' => '5',
+        'division_id' => '2',
+        'project_id' => '2',
+        'transmittal_id' => '1',
+        'status_id' => '1'
 
-        ["title"=>"Titulo 1","number"=>"0001","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"2"  ],
-  ["title"=>"Titulo 2","number"=>"0002","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"2"],
-  ["title"=>"Titulo 3","number"=>"0003","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"2"],
-  ["title"=>"Titulo 4","number"=>"0004","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"3"],
-  ["title"=>"Titulo 1","number"=>"0005","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"1"],
-  ["title"=>"Titulo 1","number"=>"0005","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"2","discipline_id"=>"2","status_id"=>"2","project_id"=>"2","division_id"=>"2"],
-  ["title"=>"Titulo 1","number"=>"0007","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"3","discipline_id"=>"2","status_id"=>"3","project_id"=>"2","division_id"=>"2"],
-  ["title"=>"Titulo 1","number"=>"0006","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"2"],
-  ["title"=>"Titulo 1","number"=>"0007","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"1"],
-  ["title"=>"Titulo 1","number"=>"0008","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"2"],
-  ["title"=>"Titulo 1","number"=>"0009","revision"=>"A","revision_date"=>"2006-01-01","client_code"=>"","full_number"=>"Este es un numero de prueba","user_id"=>"1","area_id"=>"1","discipline_id"=>"2","status_id"=>"1","project_id"=>"2","division_id"=>"2"]
+],
+[
+        'title' => 'Titulo de PRueba',
+        'number' => '0001',
+        'full_number' => '5940-ADM-C-TO-0100-0001',
+        'revision' => 'A',
+        'revision_date' => '2016-15-15',
+        'user_id' => '1',
+        'area_id' => '2',
+        'discipline_id' => '3',
+        'division_id' => '3',
+        'project_id' => '2',
+        'transmittal_id' => '1',
+        'status_id' => '1'
 
-            ]);
+]
+
+
+
+        ]);
     }
 }

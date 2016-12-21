@@ -9,7 +9,7 @@ use App\Discipline;
 
 class Division extends Model
 {
-  protected $fillable =['name','user_id','discipline_id'];
+  protected $fillable =['code','name','project_id'];
 
 
     public function users(){

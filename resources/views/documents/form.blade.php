@@ -63,7 +63,7 @@
       </div>
       <div class="form-group">
         <label for="number">Number</label>
-        <input type="text" name="number" id="number" value="{{ old('number') }}" placeholder="0001" class="form-control" onblur ="completar();" onfocus="completar();">
+        <input type="text" name="number" id="number" required value="{{ old('number') }}" placeholder="0001" class="form-control" onblur ="completar();" onfocus="completar();">
       </div>
 
       <div class="form-group">
@@ -76,11 +76,11 @@
       </div>
       <div class="form-group">
         <label for="revision">Revision</label>
-        <input type="text" name="revision" id="revision" value="{{ old('revision') }}"  placeholder="A" class="form-control">
+        <input type="text" name="revision" id="revision" required value="{{ old('revision') }}"  placeholder="A" class="form-control">
       </div>
       <div class="form-group">
         <label for="revision_date">Rev. Date</label>
-        <input type="text" name="revision_date" id="revision_date" value="{{ old('revision_date') }}" placeholder="2016-05-29" class="form-control">
+        <input type="text" name="revision_date" id="revision_date" required value="{{ old('revision_date') }}" placeholder="2016-05-29" class="form-control">
       </div>
       <div class="form-group">
         <label for="status_id">Status</label>
@@ -116,7 +116,7 @@
 
   if (project.selectedIndex !==0) {
       projectText= project.options[project.selectedIndex].text;
-      projectText = projectText.substring(0, 3);
+      projectText = projectText.substring(0, 4);
     }
     else {projectText = ""}
 

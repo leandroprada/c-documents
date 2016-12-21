@@ -48,8 +48,17 @@
             <td>{{ $document->title }}</td>
             <td>{{ $document->revision }}</td>
             <td>{{ $document->revision_date }}</td>
-            <td>{{ $document->status_id }}</td>
-            <!-- @if (Auth::user()->role === 1) -->
+
+            <td>
+            @foreach($statuses as $status)
+            @if ( $document->status_id===
+           $status->id) {{ $status->name }}
+          @endif
+          @endforeach
+
+
+          </td>
+            @if (Auth::user()->role_id === 2)
             <td>
               <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button" style="width:60px">Edit</button></a>
 
@@ -62,7 +71,7 @@
               </form>
             </td>
 
-              <!-- @endif -->
+              @endif
 
 
 

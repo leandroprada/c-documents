@@ -12,18 +12,18 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
       DB::table('projects')->insert([
-        ['code' => 'XX','name' => 'Please Select a Project',
+        ['code' => 'XXX','name' => 'Please Select a Project',
         ],
 [
-        'code' => 'OIG',
-        'name' => 'Oil and Gas Plant',
+        'code' => '5411',
+        'name' => 'Oil and Gas Plant - Letonia',
 ],[
-          'code' => 'CIV',
-        'name' => 'Civil Infrastracture',
+          'code' => '5555',
+        'name' => 'Civil Infrastracture - Tamaulipas',
       ],[
 
-        'code' => 'PWP',
-        'name' => 'Power Generation Plant'
+        'code' => '8459',
+        'name' => 'Power Generation Plant - Zaire'
 ]
                    ]);
     }

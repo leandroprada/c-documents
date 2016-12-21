@@ -28,6 +28,7 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                /*zoom: 95%;*/
             }
 
             .full-height {
@@ -193,10 +194,7 @@ Transmittals
                 <!-- SIXTH EXAMPLE -->
                 <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1">
                     <img id="imgdiv1" src="./images/blueprint.jpg" style="padding:none;display:block;height:110%"/>
-                    <div class="view">
-                        <h2>Documents</h2>
 
-                    </div>
                     <div class="mask">
                         <h2>Documents</h2>
                         <p>Project documents</p>
