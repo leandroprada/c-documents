@@ -135,7 +135,7 @@ border-radius:5px;
     <body >
 
 
-      
+
       <!-- <div class="fondo flex-center">
         <video src="/images/342241033.mp4" autoplay width="90%">
 
@@ -195,7 +195,7 @@ Transmittals
             </div>
 
                 <!-- SIXTH EXAMPLE -->
-                <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1">
+                <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1" onmouseover="hidebgimg();" onmouseout="showbgimg();">
                     <img id="imgdiv1" src="./images/blueprint.jpg" style="padding:none;display:block;height:110%"/>
 
                     <div class="mask">
@@ -206,7 +206,7 @@ Transmittals
                     </div>
                 </div>
 
-                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div2" >
+                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div2" onmouseover="hidebgimg();" onmouseout="showbgimg();">
                     <img id="imgdiv2" src="./images/transmittal.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
@@ -216,7 +216,7 @@ Transmittals
                     </div>
                 </div>
 
-                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div3" >
+                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div3" onmouseover="hidebgimg();" onmouseout="showbgimg();">
                     <img id="imgdiv3" src="./images/reports.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
@@ -251,11 +251,25 @@ Transmittals
                           div2.style.visibility = 'hidden';
                           div3.style.visibility = 'hidden';
 
+                          imgdiv1.src = "/images/bg1-cl.jpg";
+                          imgdiv2.src = "/images/bg1-cl.jpg";
+                          imgdiv3.src = "/images/bg1-cl.jpg";
+
+                    }
+                        function hidebgimg(){
                           imgdiv1.src = "";
                           imgdiv2.src = "";
                           imgdiv3.src = "";
+                        };
 
-                    }
+                        function showbgimg(){
+                          imgdiv1.src = "/images/bg1-cl.jpg";
+                          imgdiv2.src = "/images/bg1-cl.jpg";
+                          imgdiv3.src = "/images/bg1-cl.jpg";
+                        };
+
+
+
                        function showDiv1() {
                         if(div1.style.visibility == 'hidden')
                         {
