@@ -12,22 +12,22 @@
     <h1>{{ $document->name }}</h1>
 
     <div class="row">
+      <div class="col-xs-7 col-xs-offset-5"><h3>Document for Project - {{$document->project->code}} - {{$document->project->name}}</h3></div>
       <div class="col-md-8">
+        <h2>{{$document->full_number}}</h2>
+        <p>Title: {{ $document->title }} </p>
 
-        <h3>Number</h3>
-        <p>{{ $document->number }}</p>
+        <p>Rev:     {{$document->revision}} - Date:
+        {{$document->revision_date}}</p>
 
-        <h3>Title</h3>
-        <p>{{ $document->title }}</p>
 
-        <h3>Area</h3>
-        <p>{{ $document->area->name }}</p>
+          <h3>Other Data</h3>
 
-        <h3>Discipline</h3>
-        <p>{{ $document->discipline->name }}</p>
+          <p>Area - {{ $document->area->name }}</p>
 
-        <h3>Division</h3>
-        <p>{{ $document->division-> }}</p>
+          <p>Discipline - {{ $document->discipline->name }}</p>
+
+          <p>Division - {{ $document->division->name }}</p>
 
 
       </div>
@@ -36,10 +36,13 @@
 
     </div>
 @endif
+<a href="{{ url('/documents') }}">Go back to List</a>
 
   </div>
 
 @endsection
+
+
 
 <!-- @section('scripts')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>

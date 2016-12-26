@@ -21,8 +21,11 @@
           Document Statuses:
       </tr>
             @foreach($statuses as $status)
+            @if ($status->id !== 1)
       <tr><td>
+
          {{ $status->id }} : {{ $status->name }}</td> </tr>
+         @endif
        @endforeach
 
     </table>
@@ -59,15 +62,17 @@
 
           </td>
             @if (Auth::user()->role_id === 2)
-            <td>
-              <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button" style="width:60px">Edit</button></a>
+            <td >
+              <a href="/documents/{{$document->id}}/edit" ><button type="button"class="btn btn-primary btn-xs" name="button"id="btn_index_docs_edit"> <span class="ion-compose" style="font-size:2.2em"></span></button></a>
 
-              <a href="/documents/create" ><button type="button"class="btn btn-warning btn-xs" name="button" style="width:60px">Version</button></a>
+              <a href="/documents/{{$document->id}}/version" ><button type="button"class="btn btn-warning btn-xs" name="button"id="btn_index_docs_version" ><span class="ion-ios-copy-outline" style="font-size:2.2em"></span></button></a>
+              <a href="/documents/{{$document->id}}/" ><button type="button"class="btn btn-success btn-xs" name="button" id="btn_index_docs_details"><span class="ion-ios-list-outline" style="font-size:2.2em"></span></button></a>
+
   </td>
-  <td>        <form action="/documents/{{$document->id}}" method="post" style="display: inline-block;">
+  <td >        <form action="/documents/{{$document->id}}" method="post" style="display: inline-block;">
                 {{ csrf_field() }}
                 {{ method_field('delete') }}
-                <input type="submit" name="Borrar" value="Delete" class="btn btn-danger btn-xs" style="display: inline-block; width:60px">
+              <button type="submit" name="Borrar" id="btn_index_docs_delete" value="DELETE" class="btn btn-danger btn-xs" style="display: inline-block; " ><span class="ion-close" style="font-size:2.2em"></span></button>
               </form>
             </td>
 

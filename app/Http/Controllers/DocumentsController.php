@@ -25,6 +25,7 @@ class DocumentsController extends Controller
      */
     public function create()
     {
+        $users = \App\User::all();
         $roles = \App\Role::all();
         $areas = \App\Area::all();
         $deliverables  = \App\Deliverable::all();
@@ -32,8 +33,22 @@ class DocumentsController extends Controller
         $divisions  = \App\Division::all();
         $statuses  = \App\Status::all();
         $projects  = \App\Project::all();
-        return view('documents.form', compact('roles', 'areas','areas','deliverables','disciplines','divisions','statuses','projects'));
+        return view('documents.form', compact('users','roles', 'areas','areas','deliverables','disciplines','divisions','statuses','projects'));
     }
+
+    public function version(Document $document)
+    {
+        $users = \App\User::all();
+        $roles = \App\Role::all();
+        $areas = \App\Area::all();
+        $deliverables  = \App\Deliverable::all();
+        $disciplines  = \App\Discipline::all();
+        $divisions  = \App\Division::all();
+        $statuses  = \App\Status::all();
+        $projects  = \App\Project::all();
+        return view('documents.version', compact('users','roles', 'areas','areas','deliverables','disciplines','divisions','statuses','projects','document'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -82,7 +97,7 @@ class DocumentsController extends Controller
       $divisions  = \App\Division::all();
       $statuses  = \App\Status::all();
       $projects  = \App\Project::all();
-      return view('documents.form-edit', compact('roles', 'areas','deliverables','disciplines','divisions','status','projects'));
+      return view('documents.form-edit', compact('document','roles', 'areas','deliverables','disciplines','divisions','statuses','projects'));
     }
 
     /**
@@ -107,6 +122,7 @@ class DocumentsController extends Controller
      */
     public function destroy(Document $document)
     {
+      $id = $document->id;
         Document::destroy($id);
 
         // foreach ($document->images as $image) {
@@ -116,8 +132,8 @@ class DocumentsController extends Controller
         //   $image->delete();
         // }
         //pasar el document a inactivo
-        // $document->status_id = 0;
-        // $document->save();
+        $document->status_id = 0;
+        $document->save();
 
         return redirect('documents');
     }

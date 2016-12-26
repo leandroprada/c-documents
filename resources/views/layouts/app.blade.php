@@ -24,12 +24,14 @@ $transmittals  = \App\Transmittal::all();
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Scripts -->
     <script>
         window.C_docs = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+  
 </head>
 <body>
 
@@ -93,6 +95,7 @@ $transmittals  = \App\Transmittal::all();
                 </div>
             </div>
         </nav>
+
 
         @yield('content')
     </div>

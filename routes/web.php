@@ -19,9 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-
 Route::resource('documents', 'DocumentsController');
 // Route::post('documents/{id}/images', 'DocumentsController@images');
+Route::post('/documents/{id}/version', 'DocumentsController@version');
 
 Route::resource('transmittals', 'TransmittalsController');
 Route::resource('reports', 'ReportsController');
