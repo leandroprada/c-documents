@@ -21,7 +21,7 @@
             html, body {
                 background-color: #fff;
                 background-image: url(./images/desk.jpg);
-                background-position:center;
+                background-position:125px;
                 background-clip: content-box;;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -80,10 +80,14 @@ margin: auto;
 
             }
             .rd-dv{
-              border-radius: 25px;
+              border-radius: 0 25px 25px 0;
               visibility: hidden;
               animation: fadeIn 0.3s;
-              max-height: 200px;
+              max-height: 150px;
+              /*float: left;*/
+              position: fixed;
+              left:110px;
+              background-color: transparent;
             }
 
 
@@ -110,8 +114,10 @@ margin: auto;
           }
 
           @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+    /*from { opacity: 0; }
+      to { opacity: 1; }*/
+      from {width: 0%;}
+      to {width:100%;}
 }
 .loggedin{
 background-color: #494a4a;
@@ -136,8 +142,8 @@ border-radius:5px;
 
 
 
-      <!-- <div class="fondo flex-center">
-        <video src="/images/342241033.mp4" autoplay width="90%">
+      <!-- <div class"row" >
+        <video src="/images/342241033.mp4" autoplay width="50%"class=" xs-col-3 center">
 
         </video>
 
@@ -187,7 +193,7 @@ Transmittals
 
 
 
-            <div class=" rd-dv col-xs-12" style="position:fixed; top:270px; left:10%" id="div4">
+            <div class=" rd-dv col-xs-12" style="position:fixed; top:400px; left:47%" id="div4">
               <b style="font-size:2em;font-weight:bolder;font-family:Oswald;padding:none;display:block">
               @if (!Auth::check())  PLEASE LOGIN     @endif
               @if (Auth::check())  YOU ARE LOGGED IN!    @endif
@@ -195,8 +201,8 @@ Transmittals
             </div>
 
                 <!-- SIXTH EXAMPLE -->
-                <div class="rd-dv view view-sixth col-xs-12 col-md-3" id="div1" onmouseover="hidebgimg();" onmouseout="showbgimg();">
-                    <img id="imgdiv1" src="./images/blueprint.jpg" style="padding:none;display:block;height:110%"/>
+                <div class="rd-dv view view-sixth" id="div1" >
+                    <img id="imgdiv1" src="./images/blueprint.jpg" style="padding:none;display:block;"/>
 
                     <div class="mask">
                         <h2>Documents</h2>
@@ -206,7 +212,7 @@ Transmittals
                     </div>
                 </div>
 
-                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div2" onmouseover="hidebgimg();" onmouseout="showbgimg();">
+                <div class="rd-dv view view-sixth " id="div2" >
                     <img id="imgdiv2" src="./images/transmittal.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
@@ -216,7 +222,7 @@ Transmittals
                     </div>
                 </div>
 
-                <div class="rd-dv view view-sixth  col-xs-12 col-md-3" id="div3" onmouseover="hidebgimg();" onmouseout="showbgimg();">
+                <div class="rd-dv view view-sixth " id="div3" >
                     <img id="imgdiv3" src="./images/reports.jpg" style="padding:none;display:block"/>
 
                     <div class="mask">
@@ -251,9 +257,9 @@ Transmittals
                           div2.style.visibility = 'hidden';
                           div3.style.visibility = 'hidden';
 
-                          imgdiv1.src = "/images/bg1-cl.jpg";
-                          imgdiv2.src = "/images/bg1-cl.jpg";
-                          imgdiv3.src = "/images/bg1-cl.jpg";
+                          imgdiv1.src = "/images/bg1-dk.jpg";
+                          imgdiv2.src = "/images/bg1-dk.jpg";
+                          imgdiv3.src = "/images/bg1-dk.jpg";
 
                     }
                         function hidebgimg(){
@@ -263,9 +269,9 @@ Transmittals
                         };
 
                         function showbgimg(){
-                          imgdiv1.src = "/images/bg1-cl.jpg";
-                          imgdiv2.src = "/images/bg1-cl.jpg";
-                          imgdiv3.src = "/images/bg1-cl.jpg";
+                          imgdiv1.src = "/images/bg1-dk.jpg";
+                          imgdiv2.src = "/images/bg1-dk.jpg";
+                          imgdiv3.src = "/images/bg1-dk.jpg";
                         };
 
 
@@ -331,11 +337,11 @@ Transmittals
                        div4.style.visibility ="visible" ;
 
                      }
-                       setTimeout(showDivInicial1, 1000);
-                       setTimeout(showDivInicial2, 2500);
-                       setTimeout(showDivInicial3, 3500);
-                       setTimeout(showDiv4, 5500);
-                       setTimeout(hideAllDivsinicial,4500);
+                       setTimeout(showDivInicial1, 750);
+                       setTimeout(showDivInicial2, 1500);
+                       setTimeout(showDivInicial3, 2250);
+                       setTimeout(showDiv4, 4500);
+                       setTimeout(hideAllDivsinicial,2750);
 
 
 

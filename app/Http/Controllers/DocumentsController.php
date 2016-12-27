@@ -36,6 +36,12 @@ class DocumentsController extends Controller
         return view('documents.form', compact('users','roles', 'areas','areas','deliverables','disciplines','divisions','statuses','projects'));
     }
 
+    public function filter()
+    {
+
+        return view('home');
+    }
+
     public function version(Document $document)
     {
         $users = \App\User::all();
