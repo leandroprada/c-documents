@@ -9,7 +9,7 @@
         <h4 >Some features require being logged in to the system.</h4>
         </div>
          @else
-    <form action="/documents" method="post" class="form-horizontal">
+    <form action="/transmittals" method="post" class="form-horizontal">
       {{ csrf_field() }}
       {{ method_field('post') }}
 

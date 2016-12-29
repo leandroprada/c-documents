@@ -17,7 +17,7 @@
     <h1>CREATE TRANSMITTAL </h1>
   </div>
   <div class="status_list">
-    <form class="" action="" method="post">
+    <form class="" action="/transmittals" method="post">
       {{ csrf_field() }}
       {{ method_field('post') }}
     <table class="table">
@@ -47,6 +47,7 @@
   </div>
 </div>
 <hr style="color:transparent">
+<input name="documents" value="">
     <table class="table table-bordered table-striped" style="font-size:0.8em">
       <thead>
         <tr>
@@ -62,7 +63,7 @@
       <tbody>
         @foreach($documents as $document)
           <tr>
-            <td><input type="checkbox" name="{{$document->id}}" value="{{$document->id}}"></td>
+            <td><input type="checkbox" name="documents[]" value="{{$document->id}}"></td>
             <td>{{ $document->full_number }}</td>
             <td>{{ $document->title }}</td>
             <td>{{ $document->revision }}</td>
@@ -88,7 +89,7 @@
 
         </tbody>
       </table>
-
+</input>
 @endif
 <div class="col-xs-3 col-xs-offset-8  col-md-2 col-md-offset-10"> <input type="submit"class="btn btn-success btn-lg" name="trn-"title="Create Transmittal" value="Generate Transmittal" ><a href="#" style="text-decoration:none; color:white" >Generate Transmittal</a></button></div>
 

@@ -17,6 +17,12 @@ class ReportsController extends Controller
         // $reports = Report::all()->where('user_id', \Auth::id())->all();
         return view('reports.index');
     }
+    public function report()
+    {
+        $documents = Document::all()->where('project_id', $_POST['project_id']);
+        return view('reports.reportByProject');
+    }
+
 
     /**
      * Show the form for creating a new resource.

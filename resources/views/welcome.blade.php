@@ -86,7 +86,7 @@ margin: auto;
               max-height: 150px;
               /*float: left;*/
               position: fixed;
-              left:110px;
+              left:117px;
               background-color: transparent;
             }
 
@@ -114,8 +114,8 @@ margin: auto;
           }
 
           @keyframes fadeIn {
-    /*from { opacity: 0; }
-      to { opacity: 1; }*/
+      from { opacity: 0; }
+        to { opacity: 1; }
       from {width: 0%;}
       to {width:100%;}
 }
@@ -208,7 +208,7 @@ Transmittals
                         <h2>Documents</h2>
                         <p>Project documents</p>
                         <a href="/documents/create" class="info">Create</a>
-                        <a href="/documents/view" class="info">View List</a>
+                        <a href="/documents/" class="info">View List</a>
                     </div>
                 </div>
 

@@ -19,9 +19,9 @@
         <input type="text" name="title" value="{{$document->title}}" class="form-control" onblur="completar();">
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label for="project_id">Project</label>
-        <select name="project_id" class="form-control" onblur="completar();">
+        <select disabled name="project_id" class="form-control" onblur="completar();">
           @foreach($projects as $project)
           @php $selected = ($project->id == $document->project_id)?'selected':'' @endphp
             <option value="{{ $project->id }}" {{$selected}}>{{ $project->code }} - {{ $project->name }}</option>
@@ -31,7 +31,7 @@
 
       <div class="form-group">
         <label for="division_id">Division</label>
-        <select name="division_id" class="form-control" onblur="completar();">
+        <select disabled name="division_id" class="form-control" onblur="completar();">
           @foreach($divisions as $division)
           @php $selected = ($division->id == $document->division_id)?'selected':'' @endphp
             <option value="{{ $division->id }}" {{$selected}}>{{ $division->code }} - {{ $division->name }}</option>
@@ -40,7 +40,7 @@
       </div>
       <div class="form-group">
         <label for="discipline_id">Discipline</label>
-        <select name="discipline_id" class="form-control" onblur="completar();">
+        <select disabled name="discipline_id" class="form-control" onblur="completar();">
           @foreach($disciplines as $discipline)
           @php $selected = ($discipline->id == $document->discipline_id)?'selected':'' @endphp
             <option value="{{ $discipline->id }}" {{$selected}}>{{ $discipline->name }}</option>
@@ -49,7 +49,7 @@
       </div>
       <div class="form-group">
         <label for="deliverable_id">Deliverable</label>
-        <select name="deliverable_id" id="deliverable_id" class="form-control" onblur="completar();">
+        <select disabled name="deliverable_id" id="deliverable_id" class="form-control" onblur="completar();">
           @foreach($deliverables as $deliverable)
             <option value="{{ $deliverable->id }}">{{ $deliverable->code }} - {{$deliverable->name}}</option>
           @endforeach
@@ -57,7 +57,7 @@
       </div>
       <div class="form-group">
         <label for="area_id">Area</label>
-        <select name="area_id" class="form-control" onblur="completar();">
+        <select disabled name="area_id" class="form-control" onblur="completar();">
           @foreach($areas as $area)
           @php $selected = ($area->id == $document->area_id)?'selected':'' @endphp
             <option value="{{ $area->id }}" {{$selected}}>{{ $area->code }} - {{ $area->name }}</option>
@@ -66,12 +66,12 @@
       </div>
       <div class="form-group">
         <label for="number">Number</label>
-        <input type="text" name="number" value="{{$document->number}}" class="form-control" onblur="completar();" onfocus="completar();">
+        <input disabled type="text" name="number" value="{{$document->number}}" class="form-control" onblur="completar();" onfocus="completar();">
       </div>
       <div class="form-group">
         <label for="full_number">Full Number</label>
-        <input type="text" name="full_number" id="full_number" value="{{ $document->full_number }}"  class="form-control " onfocus ="completar();" onblur ="completar();" >
-      </div> -->
+        <input disabled type="text" name="full_number" id="full_number" value="{{ $document->full_number }}"  class="form-control " onfocus ="completar();" onblur ="completar();" >
+      </div>
       <div class="form-group">
         <label for="client_code">Client Code</label>
         <input type="text" name="client_code" id="client_code" value="{{ $document->client_code }}" placeholder="Type Client Code" class="form-control">
@@ -101,7 +101,6 @@
       <div class="form-group">
         <input type="submit" name="Enviar" class="btn btn-primary">
       </div>
-
     </form>
 @endif
   </div>

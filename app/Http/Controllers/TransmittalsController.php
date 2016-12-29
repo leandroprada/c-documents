@@ -19,6 +19,8 @@ class TransmittalsController extends Controller
       {
           $transmittals = Transmittal::all()->where('user_id', \Auth::id())->all();
           return view('transmittals.index', compact('transmittals'));
+          $transmittal->documents()->sync($request->input('documents'));
+
       }
 
       /**
@@ -60,7 +62,7 @@ class TransmittalsController extends Controller
        */
       public function show(Transmittal $transmittal)
       {
-          return view('transmittals.show', compact('transmittals'));
+          return view('transmittals.show', compact('transmittals','documents'));
       }
 
       /**

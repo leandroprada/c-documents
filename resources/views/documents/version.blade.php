@@ -10,7 +10,7 @@
         <h4 >Some features require being logged in to the system.</h4>
         </div>
          @else
-    <form action="/documents/{{$document->id}}" method="post" class="form-horizontal">
+    <form action="/documents/{{$document->id}}/version" method="post" class="form-horizontal">
       {{ csrf_field() }}
       {{ method_field('patch') }}
 
@@ -19,9 +19,9 @@
         <input type="text" name="title" value="{{$document->title}}" class="form-control" onblur="completar();">
       </div>
 
-      <!-- <div class="form-group">
+     <div class="form-group">
         <label for="project_id">Project</label>
-        <select name="project_id" class="form-control" onblur="completar();">
+        <select  name="project_id" class="form-control" onblur="completar();">
           @foreach($projects as $project)
           @php $selected = ($project->id == $document->project_id)?'selected':'' @endphp
             <option value="{{ $project->id }}" {{$selected}}>{{ $project->code }} - {{ $project->name }}</option>
@@ -71,7 +71,7 @@
       <div class="form-group">
         <label for="full_number">Full Number</label>
         <input type="text" name="full_number" id="full_number" value="{{ $document->full_number }}"  class="form-control " onfocus ="completar();" onblur ="completar();" >
-      </div> -->
+      </div>
       <div class="form-group">
         <label for="client_code">Client Code</label>
         <input type="text" name="client_code" id="client_code" value="{{ $document->client_code }}" placeholder="Type Client Code" class="form-control">
@@ -163,15 +163,6 @@
     var desc = tp+"-"+td1+"-"+td2+"-"+td3+"-"+ta+"-"+tn;
     var descripcionSinGuiones =desc.replace( "  ", "")
 full_number.value = desc;
-  // function valoresDeDesc() {
-  // if  ((tr !== "") AND (to !== ""))
-  // {return tr+" "+tt+" "+to;}
-  // else if   ((tr !== "") AND (tc !== ""))
-  // {return tr+" "+tc+" "+to;}
-  // else if   ((tr !== "") AND (ti !== ""))
-  // {return tr+" "+ti+" "+to;}
-  // else if   ((tr !== "") AND (tv !== ""))
-  // {return tr+" "+tv+" "+to;}
 
 
 
